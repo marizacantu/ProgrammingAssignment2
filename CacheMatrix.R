@@ -25,3 +25,14 @@ cacheSolve <- function(x, ...) {
     x$setInverse(inver)
     inver
 }
+#Test
+example <- makeCacheMatrix(matrix(1:4,2))
+example$get()
+example$getInverse()
+example$set(matrix(5:8,2))
+example$get()
+cacheSolve(example)
+cacheSolve(example)
+example$getInverse()
+
+
