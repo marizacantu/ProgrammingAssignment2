@@ -35,4 +35,33 @@ cacheSolve(example)
 cacheSolve(example)
 example$getInverse()
 
+#solution
+#Test
+> example <- makeCacheMatrix(matrix(1:4,2))
+> example$get()
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+> example$getInverse()
+NULL
+> example$set(matrix(5:8,2))
+> example$get()
+     [,1] [,2]
+[1,]    5    7
+[2,]    6    8
+> cacheSolve(example)
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+> cacheSolve(example)
+[1] "getting cached data"
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+> example$getInverse()
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+> 
+
 
